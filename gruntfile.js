@@ -4,6 +4,20 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    'http-server': {
+        dist: {
+            root: './',
+            port: 8080,
+            host: '127.0.0.1',
+            cache: 0,
+            showDir: true,
+            autoIndex: true,
+            ext: 'html',
+            runInBackground: true,
+            openBrowser: false
+        }
+    },
+
     sass: {
         dist: {
             options: {
@@ -25,11 +39,11 @@ module.exports = function(grunt) {
 
   });
 
-  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'watch']);
+  grunt.registerTask('default', ['sass', 'http-server', 'watch']);
 
 };
