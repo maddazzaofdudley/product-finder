@@ -1,0 +1,32 @@
+<div class="lookup-partial">
+
+    <div class="steps">
+        <span ng-model="steps">
+            <a href="#home">Home ></a>
+            <a href="{{ '#/lookup/saleschannel/' + salesChannel + '/path/' }}">{{ salesChannel + ' > ' }}</a>
+            <a ng-value="step" ng-repeat="step in steps" href="{{ '#' + step.path }}">{{ step.text + ' > ' }}</a>
+            <a ng-model="currentLevelName">{{ currentLevelName }}</a>
+        </span>
+    </div>
+    <h2 class="intro">Products you can sell in Sales Channel... </h2>
+    <span ng-model="salesChannel" class="sales-channel"> {{ salesChannel }} </span>
+    <h3 class="instructions">Click on a product category circle to drill down to the products</h3>
+
+    <div class="circles-container" ng-model="circles">
+        <div class="circle-link child {{ circle.type }} {{ circle.level }} " ng-repeat="circle in circles" data-product-id="{{ circle.id }}">
+            <a href="./{{ circle.path }}">
+                <div class="circle" md-ink-ripple=#000 ng-style="{'background-color': circle.colour}">
+                    <div class="tags">
+                        <p data-hover-text="{{ circle.gms }}" class="gms">{{ circle.gms.charAt(0) }}</p>
+                        <p data-hover-text="{{ circle.status }}" class="status">{{ circle.status.charAt(0) }}</p>
+                    </div>
+
+                    <p class="circle-name">{{ circle.name }}</p>
+
+                </div>
+            </a>
+            <p class="info">{{ circle.infoAvailable ? "i" : "" }}</p>
+        </div>
+    </div>
+
+</div>

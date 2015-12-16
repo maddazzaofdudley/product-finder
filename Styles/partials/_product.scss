@@ -1,0 +1,438 @@
+.product-back-button {
+    margin: auto;
+    display: block;
+}
+
+.product-partial {
+    margin: 20px 0 0 0;
+
+    .product-name {
+        margin-bottom: 0;
+    }
+
+    .tags {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 10px;
+        width: 100px;
+
+        p {
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+    .channels {
+        display: inline-block;
+        width: calc(100% - 110px);
+
+        button{
+            float: right;
+        }
+    }
+
+    .alternative-products {
+        vertical-align: top;
+        display: block;
+        width: 100%;
+
+        * {
+            text-align: center;
+        }
+
+        .altProduct {
+            padding-left: 0;
+
+            a {
+                text-decoration: none;
+                color: black;
+                border-bottom: 1px solid $vodafone-red;
+            }
+        }
+
+
+    }
+
+    .supporting-information {
+        vertical-align: top;
+        display: block;
+        width: 100%;
+
+        * {
+            text-align: center;
+        }
+        p {
+            border-bottom: 1px solid $vodafone-red;
+            width: 10em;
+            cursor: pointer;
+        }
+
+        .mk-popup {
+            width: 200px;
+            left: 100px;
+            bottom: 46px;
+            a {
+                display: block;
+                color: black;
+                text-decoration: none;
+                padding: 4px;
+
+            }
+        }
+
+        .ti-popup {
+            width: 200px;
+            left: 100px;
+            bottom: 0;
+
+            a {
+                display: block;
+                color: black;
+                text-decoration: none;
+                padding: 4px;
+            }
+        }
+    }
+
+    .roadmap-description {
+        margin-top: 40px;
+    }
+
+    .roadmap-colours {
+        margin-top: 40px;
+        span {
+            display: block;
+            margin-bottom: 6px;
+            div {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                border-radius: 10px;
+                vertical-align: -1px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .roadmaps {
+
+        height: auto;
+        margin-bottom: 20px;
+        padding-top: 1px;
+        position: relative;
+
+        .year-labels {
+
+            font-weight: bold;
+            margin-top: 10px;
+
+            .first-year {
+                display: inline-block;
+                margin-left: 64px;
+            }
+
+            .second-year {
+                display: inline-block;
+                margin-left: calc(60% - 78px);
+            }
+        }
+
+        .chart {
+            top: 30px;
+            position: absolute;
+            z-index: 2;
+            display: block;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+
+            .year {
+                box-sizing: border-box;
+                height: 100%;
+                display: inline-block;
+                width: calc(60% - 36px);
+                margin-left: -10px;
+                border-left: 4px dotted #bbbbbb;
+
+                &.year2 {
+                    width: calc(40% - 36px);
+
+                    .quarter {
+                        width: 40%;
+                    }
+
+                }
+
+                &:first-child {
+                    margin-left: 81px;
+                }
+
+                .quarter {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: 100%;
+                    width: 25%;
+                    border-right: 2px dotted $line-grey;
+
+                    &.last {
+                        border-right: none;
+                    }
+                }
+
+                .half {
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: 100%;
+                    width: 20%;
+
+                    div {
+                        span{
+                            position: absolute;
+                        }
+                    }
+                }
+
+                .month {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: 100%;
+                    width: 33%;
+                    border-right: 1px dotted $line-grey;
+                    font-weight: bold;
+                    position: relative;
+
+                    &.last {
+                        border-right: 0;
+                    }
+                    &:first-child {
+                    }
+
+                    span {
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    .roadmap-graph {
+        margin-top: 20px;
+        display: block;
+        height: 72px;
+        box-shadow: 0px 0px 10px $line-grey;
+        z-index: 2;
+        position: relative;
+        width: calc(100% - 3px);
+
+        a {
+            cursor: pointer;
+        }
+
+        .title {
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0;
+            background-color: black;
+            color: white;
+            display: inline-block;
+            height: 100%;
+            padding: 10px 10px;
+            width: 84px;
+            font-weight: bold;
+            word-wrap: normal;
+            text-overflow: ellipsis;
+        }
+
+        .lines-container {
+            width: calc(100% - 84px);
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            vertical-align: top;
+
+            .line {
+                display: inline-block;
+                background-color: $vodafone-red;
+                width: 0;
+                height: 10px;
+                position: absolute;
+                top: 32px;
+                z-index: 2;
+
+                &:nth-child(even) {
+                    .point {
+                        .product-link {
+                            top: 16px;
+                        }
+                    }
+                }
+
+                &.committed {
+                    background-color: $status_green;
+                }
+
+                &.planned {
+                    background-color: $status_yellow;
+                }
+
+                &.intent {
+                    background-color: $status_blue;
+                }
+
+                .point {
+                    width: 16px;
+                    height: 16px;
+                    background-color: $vodafone-red;
+                    display: inline-block;
+                    border-radius: 100%;
+                    position: relative;
+                    top: -3px;
+                    left: calc(100% - 10px);
+
+                    &.committed {
+                        background-color: $status_green;
+                    }
+
+                    &.planned {
+                        background-color: $status_yellow;
+                    }
+
+                    &.intent {
+                        background-color: $status_blue;
+                    }
+
+                    .product-link {
+                        display: inline-block;
+                        max-height: 1em;
+                        min-width: 100px;
+                        text-overflow: ellipsis;
+                        top: -16px;
+                        left: -40px;
+                        position: relative;
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .theme-page {
+
+      .back-to-graph {
+        color: $vodafone-red;
+        cursor: pointer;
+      }
+
+      .theme {
+
+        p {
+          margin-bottom: 5px;
+
+          .committed {
+            color: #01B050;
+          }
+
+          .intent {
+            color: #00BEF3;
+          }
+
+          .planned {
+            color: #FFCF54;
+          }
+
+        }
+
+
+        .dash {
+
+          margin-left: 30px;
+          margin-right: 30px;
+          margin-top: 12px;
+          background-color: #F7C33A;
+          display: inline-block;
+          width: 12px;
+          height: 2px;
+          vertical-align: top;
+
+
+        }
+
+        .point {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          display: inline-block;
+          width: calc(100% - 72px);
+
+        }
+      }
+    }
+
+}
+
+
+
+@media screen and (min-width: 560px) {
+
+    .product-back-button {
+        margin: 0;
+        display: inline-block;
+        margin-left: 65px;
+        margin-top: 60px;
+    }
+
+    .product-partial {
+        margin: 12px 40px 0 40px;
+
+        .alternative-products {
+            display: inline-block;
+            width: 49%;
+
+            * {
+                text-align: left;
+            }
+        }
+
+        .supporting-information {
+            display: inline-block;
+            width: 49%;
+
+            * {
+                text-align: left;
+            }
+        }
+
+        .theme-page {
+          .theme {
+
+            p {
+              margin-bottom: 5px;
+            }
+
+
+            .dash {
+
+              margin-left: 30px;
+              margin-right: 30px;
+              margin-top: 12px;
+              display: inline-block;
+              width: 12px;
+              height: 2px;
+              vertical-align: top;
+
+
+            }
+
+            .point {
+              margin-top: 5px;
+              margin-bottom: 5px;
+              display: inline-block;
+              width: calc(100% - 72px);
+
+            }
+          }
+        }
+
+    }
+}

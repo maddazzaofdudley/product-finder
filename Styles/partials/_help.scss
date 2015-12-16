@@ -1,0 +1,96 @@
+.help-partial {
+    padding: 0;
+
+    .qa-box {
+
+        overflow: hidden;
+        margin-bottom: 1em;
+
+        .question {
+            font-size: 1.2em;
+            margin: 0;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: $vodafone-red;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .answer {
+            margin: 0;
+            padding: 6px 0 6px 12px;
+            color: #888888;
+
+            p {
+                margin: 0;
+                background-color: #fff;
+            }
+
+            .break {
+                margin: 8px 0;
+            }
+
+            .committed {
+                color: #00B050;
+                font-weight: bold;
+            }
+
+            .planned {
+                color: #FFC000;
+                font-weight: bold;
+            }
+
+            .intent {
+                font-weight: bold;
+                color: #00B0F0;
+            }
+        }
+
+        &.closed {
+            height: 3.5em;
+
+            .question {
+                color: #888888;
+
+                &:hover {
+                    color: $vodafone-red;
+                }
+            }
+
+            .answer {
+                display: none;
+            }
+        }
+    }
+
+    .download-link {
+        font-size: 1.2em;
+        color: $vodafone-red;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+
+    .red-text {
+        color: $vodafone-red;
+    }
+
+    p, ol {
+        color: $dark-grey;
+    }
+
+    ol {
+        margin-bottom: 42px;
+    }
+
+}
+
+@media screen and (min-width: 560px) {
+
+    .help-partial {
+        padding: 46px;
+    }
+
+}

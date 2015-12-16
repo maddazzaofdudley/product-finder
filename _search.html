@@ -1,0 +1,15 @@
+<div class="search-partial">
+    <div class="search-partial-header">
+        <h1 class="title">Search Results</h1>
+        <p class="search-query">Showing results for <span ng-model="query">{{ query }}</span></p>
+        <p ng-model="numberOfResults" class="results-number"><span>{{ numberOfResults }}</span> products found</p>
+    </div>
+
+    <div ng-model="searchResults" class="body">
+        <div ng-value="result" ng-repeat="result in searchResults">
+            <a class="result-title" href="{{ result.url }}">{{ result.title }}</a>
+            <span class="short-description"> {{ result.short_description }}</span>
+            <p ng-model="result" class="results-sales-channels"><span ng-repeat="salesChannel in result.salesChannels"> {{ salesChannel }} </span></p>
+        </div>
+    </div>
+</div>

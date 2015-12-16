@@ -1,0 +1,83 @@
+.steps {
+    a {
+        text-decoration: none;
+        color: #999999;
+
+        &:last-child {
+            color: $vodafone-red;
+        }
+
+        &:hover {
+            color: $vodafone-red;
+        }
+    }
+
+
+}
+
+.hidden {
+    display: none;
+}
+
+.tags {
+    p {
+        box-sizing: border-box;
+        padding-left: 5px;
+        padding-top: 2px;
+        font-size: 16px;
+        margin: 0;
+        border-radius: 100%;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        color: black;
+    }
+
+    .gms {
+        background-color: $green;
+    }
+
+    .status {
+        background-color: $orange;
+    }
+
+}
+
+.popover {
+    position: absolute;
+    background-color: #cccccc;
+    border-radius: 12px;
+    padding: 2px 6px;
+    overflow-y: auto;
+
+    &.info-popover {
+        width: 200px;
+        left: -40px;
+        top: 0;
+        font-size: 12px;
+    }
+}
+
+.hover-over {
+    margin-left: 10px;
+    position: absolute;
+    top: -22px;
+    background-color: #ddd;
+    padding: 2px 4px;
+    border-radius: 4px;
+    color: #444;
+    z-index: 5;
+
+}
+
+.committed {
+    background-color: $status_green;
+}
+
+.planned {
+    background-color: $status_yellow;
+}
+
+.intent {
+    background-color: $status_blue;
+}

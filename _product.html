@@ -1,0 +1,54 @@
+<a class="product-back-button" ng-model="backLink" href="{{ backLink }}"><md-button class="md-raised md-primary search-button">Back to Lookup</md-button></a>
+
+<div class="product-partial">
+    <md-tabs md-dynamic-height>
+        <md-tab ng-model="product" label="Product">
+            <h1 class="product-name">{{ product.name }}</h1>
+            <div class="tags">
+                <p class="gms" data-hover-text="{{ product.gms }}">{{ product.gms.charAt(0) }}</p>
+                <p class="status" data-hover-text="{{ product.status }}">{{ product.status.charAt(0) }}</p>
+            </div>
+            <div class="channels">
+                <md-button class="md-raised md-primary sales-channel" ng-repeat="channel in product.salesChannels"> {{ channel }} </md-button>
+            </div>
+
+            <div class="product-description" ng-bind-html="descriptionElement"></div>
+            <div class="benefits">
+                <h3>Benefits</h3>
+                <p>{{ product.benefits }}</p>
+            </div>
+            <div class="alternative-products">
+              <h4>Other Versions/Features You Can Sell</h4>
+              <ul class="altProduct" ng-model="altProducts" ng-value="altProduct" ng-repeat="altProduct in altProducts"><a href="{{ altProduct.link }}">{{ altProduct.label }}</a></ul>
+            </div>
+            <div class="supporting-information">
+              <h4>Supporting Information</h4>
+              <p class="mk-opener">Marketing collateral</p>
+              <div class="mk-popup popover hidden">
+                  <a ng-repeat="property in product.MCproperties" target="_blank" href="{{ property.link }}">{{ property.name }}</a>
+              </div>
+              <p class="ti-opener">Technical information</p>
+              <div class="ti-popup popover hidden">
+                  <a ng-repeat="property in product.TIproperties" target="_blank" href="{{ property.link }}">{{ property.name }}</a>
+              </div>
+            </div>
+        </md-tab>
+
+        <md-tab label="Roadmap">
+            <div class="roadmap-tab">
+                <p class="unavailable-roadmap">No roadmap is available yet for this product.</p>
+                <p class="no-roadmap">No roadmap available at all.</p>
+                <div class="roadmaps">
+                </div>
+                <div class="roadmap-colours">
+                    <span><div class="committed"></div>In development, delivery date confirmed</span>
+                    <span><div class="planned"></div>Planned for development; delivery date to be confirmed</span>
+                    <span><div class="intent"></div>Intended for some point in the future but no committed plan</span>
+                </div>
+                <p class="roadmap-description">A roadmap shows what future developments/releases are planned for a product and are available for Grow products only.</p>
+          </div>
+        </md-tab>
+
+    </md-tabs>
+
+</div>

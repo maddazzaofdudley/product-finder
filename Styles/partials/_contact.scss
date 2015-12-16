@@ -1,0 +1,32 @@
+.contact-partial {
+    margin: 0;
+
+    .nameBox {
+
+        width: 320px;
+
+        label {
+            margin-left: 0;
+        }
+    }
+
+    .email-textarea {
+        resize: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .send-button {
+        margin-top: 12px;
+        margin-right: 5px;
+        float: right;
+    }
+
+}
+
+@media screen and (min-width: 560px) {
+    .contact-partial {
+        margin: 54px;
+    }
+
+}

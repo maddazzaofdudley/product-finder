@@ -1,0 +1,195 @@
+.lookup-partial {
+    margin-top: 20px;
+
+    .steps {
+        margin-left: 0;
+    }
+
+    h2 {
+        display: inline-block;
+        margin: 0;
+        line-height: 1.2em;
+        padding-left: 0;
+        margin-top: 12px;
+    }
+
+    .sales-channel {
+        float: right;
+        color: $vodafone-red;
+        padding-right: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-weight: normal;
+        font-style: italic;
+        margin-top: 2px;
+        padding-left: 0;
+        font-size: 14px;
+    }
+
+    .circles-container {
+        text-align: center;
+        height: 480px;
+        position: relative;
+        height: auto;
+
+        &:focus {
+            outline: none;
+        }
+        .circle-link {
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+            width: 160px;
+            height: 160px;
+            vertical-align: top;
+            margin: 26px;
+
+            &.child {
+                width: 130px;
+                height: 130px;
+                font-size: 14px;
+
+                &.first {
+                    width: 160px;
+                    height: 160px;
+                    font-size: 16px;
+
+                    .popover {
+                        left: -26px;
+                    }
+                }
+            }
+
+            &.category {
+                .tags {
+                    display: none;
+                }
+            }
+
+            &.parent-circle {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .circle {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-color: $vodafone-red;
+                border-radius: 100%;
+
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .tags {
+                    margin: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    left: 0;
+                    right: 0;
+                    position: absolute;
+                    top: 10px;
+
+                    p {
+                        padding-left: 0;
+                        padding-top: 3px;
+                    }
+                }
+
+
+
+                .circle-name {
+                    vertical-align: middle;
+                    padding: 20px;
+                    font-size: 1.2em;
+                    color: #fff;
+                }
+            }
+
+            .context-buttons {
+                position: absolute;
+                background-color: black;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                margin: auto;
+                left: 0;
+                right: 0;
+                vertical-align: middle;
+
+                &.sub-category {
+                    top: 6px;
+                }
+
+                &.circle-info {
+                    bottom: 6px;
+                }
+
+                span {
+                    vertical-align: middle;
+                }
+
+            }
+        }
+
+        .info {
+            background-color: black;
+            color: #fff;
+            font-style: italic;
+            position: absolute;
+            bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            display: inline;
+            width: 22px;
+            height: 22px;
+            border-radius: 100%;
+            line-height: 22px;
+            vertical-align: baseline;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 560px) {
+
+    .lookup-partial {
+        margin-top: 60px;
+
+        .steps {
+            margin-left: 90px;
+        }
+
+        h2 {
+            padding-left: 42px;
+            margin-top: 0;
+        }
+
+        h3 {
+            padding-left: 42px;
+        }
+
+        .circles-container {
+            height: 480px;
+            .circle-link {
+                position: absolute;
+                margin: 0 0;
+            }
+        }
+
+    }
+
+}

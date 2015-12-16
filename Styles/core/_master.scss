@@ -1,0 +1,117 @@
+.wholePage {
+    min-height: 100%;
+    width: 100%;
+    min-width: 380px;
+    background-color: $bg-grey;
+
+    .mainContent {
+        margin: 0;
+        background-color: #fff;
+
+        .mainCardContent {
+            min-height: 500px;
+
+            .home-link {
+                display: none;
+            }
+
+            .logoImage {
+                display: none;
+            }
+
+            .search-header {
+                text-align: right;
+                vertical-align: middle;
+
+                .small-search-box {
+                    border: 1px solid $grey;
+                    padding: 7px 0;
+                    width: 150px;
+
+                    input {
+                        border: none;
+                        border-right: 1px solid $grey;
+                        background-color: transparent;
+                        padding: 7px 0;
+                        padding-left: 7px;
+                        width: 150px;
+                    }
+
+                    i {
+                        vertical-align: -7px;
+                        color: $dark-grey;
+                        padding: 4px 0;
+                        cursor: pointer;
+                    }
+                }
+
+                .help-button {
+                    padding: 8px;
+                    text-decoration: none;
+                    color: $vodafone-red;
+                }
+            }
+
+            .partial-container {
+                z-index: 10;
+            }
+        }
+
+        .versionLabel {
+            color: $light-grey;
+            font-size: 12px;
+            text-align: right;
+            margin-right: 1em;
+
+            a {
+                color: $vodafone-red;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 560px) {
+    .wholePage {
+        padding-top: 32px;
+
+        .mainContent {
+            margin: auto;
+            width: 90%;
+            max-width: 768px;
+
+            .mainCardContent {
+
+                .home-link {
+                    height: 60px;
+                    width: 60px;
+                    margin-top: 10px;
+                    margin-left: 25px;
+                    z-index: 5;
+                    display: inline-block;
+                    position: absolute;
+
+                }
+
+                .logoImage {
+                    margin: -16px 0 0 -16px;
+          	        display: inline-block;
+          	        position: absolute;
+                }
+
+                .search-header {
+                    .small-search-box {
+                        width: 203px;
+                        input {
+                            width: 203px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .searchArea {
+        padding: 16px 0 0 100px;
+    }
+}

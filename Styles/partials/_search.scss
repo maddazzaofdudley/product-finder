@@ -1,0 +1,54 @@
+.search-partial {
+    margin-top: 40px;
+
+    .search-partial-header {
+        .title {
+            margin-left: 70px;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
+        .results-number {
+            margin-top: 0;
+        }
+
+        .search-query {
+            margin-bottom: 0;
+        }
+
+        span {
+            color: $vodafone-red;
+        }
+
+    }
+
+
+
+    .body {
+
+        margin-left: 20px;
+
+        .result-title {
+            text-decoration: none;
+            color: $vodafone-red;
+            font-size: 1.2em;
+        }
+
+        .results-sales-channels {
+
+            margin-top: 18px;
+
+
+            span {
+                color: #666666;
+                margin-top: 4px;
+                margin-right: 8px;
+                font-weight: bold;
+            }
+
+        }
+    }
+
+}

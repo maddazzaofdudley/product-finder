@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="pfApp">
+
+  <head>
+    <meta name="viewport" content="width=device-width">
+		<title>Product Finder</title>
+		<link rel="stylesheet" type="text/css" href="Styles/product-finder.css" />
+	</head>
+
+	<body >
+
+		<div id="wholePage" class="wholePage">
+
+			<md-card id="appCard" class="mainContent" >
+
+				<md-card-content class="mainCardContent">
+
+                    <img id="logo" class="logoImage" src="media/Logo.png" />
+                    <a class="home-link" href="#home"></a>
+
+                    <div ng-controller="searchHandler" class="search-header">
+                        <span class="small-search-box">
+                            <input type="text" ng-model="searchText.text" placeholder="Search" />
+                            <a ng-model="searchText" ng-click="validateAndSearch()"><i class="material-icons">search</i></a>
+                        </span>
+                        <a class="help-button" href="#help">Help & Support</a>
+                    </div>
+
+                    <div class="partial-container">
+                        <ng-view></ng-view>
+                    </div>
+				</md-card-content>
+
+		  <p class="versionLabel">Version 0.1 alpha; <a href="#contact">Tell us what you think</a></p>
+
+			</md-card>
+
+		</div>
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/html5shiv/dist/html5shiv.js"></script>
+    <script src="node_modules/PIE-1.0.0/PIE.js"></script>
+    <script src="node_modules/angularjs-ie8-build/dist/angular.js"></script>
+    <script src="js/main.js"></script>
+
+	</body>
+
+</html>

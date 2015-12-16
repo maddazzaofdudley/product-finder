@@ -1,0 +1,48 @@
+<div class="home-partial">
+    <h1 class="welcomeMessage">Welcome to Product Finder</h1>
+    <p class="intro">Here you will find the latest information on the product portfolio</p>
+    <p class="instructions">To find a product, select a sales channel or use Search</p>
+    <div class="segmentSelection">
+        <select ng-model="segmentSelect.SelectedOption" ng-options="salesChannel.name for salesChannel in segmentSelect.options track by salesChannel.name" class="segmentSelector">
+            <!--<option ng-model="segmentList" ng-value="segment" ng-repeat="segment in allSegments">{{ segment }}</option>-->
+        </select>
+        <a class="go-link" ng-model="segmentSelect" ng-click="validateAndGo()"><md-button class="md-fab md-primary goButton"> GO! </md-button></a>
+    </div>
+
+    <div class="searchArea">
+        <md-input-container class="searchBox">
+            <input class="searchText" type="text" ng-model="searchText.text" placeholder="what product are you looking for?" />
+        </md-input-container>
+        <a ng-model="searchText" ng-click="validateAndSearch()"><md-button class="md-raised md-primary channel-indicator"> Search </md-button></a>
+    </div>
+
+    <div class="hottestProducts">
+        <h2>Most Viewed Pages</h2>
+
+        <ul class="hotList" ng-model="hottestSMB">
+            <li class="listHeader">SMB</li>
+            <li ng-value="SMBEntry" ng-repeat="SMBEntry in hotSMB"><a class="mvp-link" href="{{ SMBEntry.link }}">{{ SMBEntry.text }}</a></li>
+        </ul>
+
+        <ul class="hotList" ng-model="hottestSME">
+            <li class="listHeader">SME</li>
+            <li ng-value="SMEEntry" ng-repeat="SMEEntry in hotSME"><a class="mvp-link" href="{{ SMEEntry.link }}">{{ SMEEntry.text }}</a></li>
+        </ul>
+
+        <ul class="hotList" ng-model="hottestMM">
+            <li class="listHeader">Mid Market</li>
+            <li ng-value="MMEntry" ng-repeat="MMEntry in hotMM"><a class="mvp-link" href="{{ MMEntry.link }}">{{ MMEntry.text }}</a></li>
+        </ul>
+
+        <ul class="hotList" ng-model="hottestLE">
+            <li class="listHeader">Large Enterprise</li>
+            <li ng-value="LEEntry" ng-repeat="LEEntry in hotLE"><a class="mvp-link" href="{{ LEEntry.link }}">{{ LEEntry.text }}</a></li>
+        </ul>
+
+        <ul class="hotList" ng-model="hottestPublic">
+            <li class="listHeader">Public</li>
+            <li ng-value="PublicEntry" ng-repeat="PublicEntry in hotPublic"><a class="mvp-link" href="{{ PublicEntry.link }}">{{ PublicEntry.text }}</a></li>
+        </ul>
+
+    </div>
+</div>
