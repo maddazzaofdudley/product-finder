@@ -6,14 +6,12 @@
         <select ng-model="segmentSelect.SelectedOption" ng-options="salesChannel.name for salesChannel in segmentSelect.options track by salesChannel.name" class="segmentSelector">
             <!--<option ng-model="segmentList" ng-value="segment" ng-repeat="segment in allSegments">{{ segment }}</option>-->
         </select>
-        <a class="go-link" ng-model="segmentSelect" ng-click="validateAndGo()"><md-button class="md-fab md-primary goButton"> GO! </md-button></a>
+        <a class="go-link" ng-model="segmentSelect" ng-click="validateAndGo()"><span class="button go-button"> GO! </span></a>
     </div>
 
     <div class="searchArea">
-        <md-input-container class="searchBox">
-            <input class="searchText" type="text" ng-model="searchText.text" placeholder="what product are you looking for?" />
-        </md-input-container>
-        <a ng-model="searchText" ng-click="validateAndSearch()"><md-button class="md-raised md-primary channel-indicator"> Search </md-button></a>
+        <input class="searchText" type="text" ng-model="searchText.text" placeholder="what product are you looking for?" />
+        <a ng-model="searchText" ng-click="validateAndSearch()"><span class="button"> Search </span></a>
     </div>
 
     <div class="hottestProducts">

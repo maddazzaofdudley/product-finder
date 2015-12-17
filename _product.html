@@ -1,15 +1,15 @@
 <a class="product-back-button" ng-model="backLink" href="{{ backLink }}"><md-button class="md-raised md-primary search-button">Back to Lookup</md-button></a>
 
 <div class="product-partial">
-    <md-tabs md-dynamic-height>
-        <md-tab ng-model="product" label="Product">
+    <div class="tabs-container">
+        <div class="tab product-tab" ng-model="product" label="Product">
             <h1 class="product-name">{{ product.name }}</h1>
             <div class="tags">
                 <p class="gms" data-hover-text="{{ product.gms }}">{{ product.gms.charAt(0) }}</p>
                 <p class="status" data-hover-text="{{ product.status }}">{{ product.status.charAt(0) }}</p>
             </div>
             <div class="channels">
-                <md-button class="md-raised md-primary sales-channel" ng-repeat="channel in product.salesChannels"> {{ channel }} </md-button>
+                <span class="button" ng-repeat="channel in product.salesChannels"> {{ channel }} </span>
             </div>
 
             <div class="product-description" ng-bind-html="descriptionElement"></div>
@@ -32,9 +32,9 @@
                   <a ng-repeat="property in product.TIproperties" target="_blank" href="{{ property.link }}">{{ property.name }}</a>
               </div>
             </div>
-        </md-tab>
+        </div>
 
-        <md-tab label="Roadmap">
+        <div class="tab roadmap-tab" label="Roadmap">
             <div class="roadmap-tab">
                 <p class="unavailable-roadmap">No roadmap is available yet for this product.</p>
                 <p class="no-roadmap">No roadmap available at all.</p>
@@ -49,6 +49,6 @@
           </div>
         </md-tab>
 
-    </md-tabs>
+    </div>
 
 </div>
