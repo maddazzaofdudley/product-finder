@@ -163,33 +163,3 @@
         }
     }
 }
-
-@media screen and (min-width: 560px) {
-
-    .lookup-partial {
-        margin-top: 60px;
-
-        .steps {
-            margin-left: 90px;
-        }
-
-        h2 {
-            padding-left: 42px;
-            margin-top: 0;
-        }
-
-        h3 {
-            padding-left: 42px;
-        }
-
-        .circles-container {
-            height: 480px;
-            .circle-link {
-                position: absolute;
-                margin: 0 0;
-            }
-        }
-
-    }
-
-}

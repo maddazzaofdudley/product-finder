@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width">
 		<title>Product Finder</title>
 		<link rel="stylesheet" type="text/css" href="Styles/product-finder.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" type="text/css" href="Styles/product-finder-ie8.css" />
+        <![endif]-->
 	</head>
 
 	<body>
@@ -41,9 +44,12 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/es5-shim/es5-shim.js"></script>
     <script src="node_modules/html5shiv/dist/html5shiv.js"></script>
-    <script src="node_modules/PIE-1.0.0/PIE.js"></script>
+    <script src="js/PIE-1.0.0/PIE.js"></script>
     <script src="node_modules/angularjs-ie8-build/dist/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
+    <!--[if lte IE 8]>
+        <script src="js/ie8-resize.js"></script>
+    <![endif]-->
     <script src="js/main.js"></script>
 
 	</body>

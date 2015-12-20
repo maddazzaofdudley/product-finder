@@ -25,7 +25,8 @@ module.exports = function(grunt) {
             },
 
             files: {
-                'Styles/product-finder.css' : 'Styles/product-finder.scss'
+                'Styles/product-finder.css' : 'Styles/product-finder.scss',
+                'Styles/product-finder-ie8.css' : 'Styles/product-finder-ie8.scss'
             }
         }
     },
