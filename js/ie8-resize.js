@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(window).on('resize', function() {
-        if ($(window).width() < 540) {
+        if ($(window).width() < 560) {
             $('link[rel="stylesheet"][href~="Styles/product-finder-ie8.css"]').attr('disabled', true);
         }
 
